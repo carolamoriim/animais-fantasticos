@@ -30,12 +30,16 @@ export default class AnimaNumeros {
     );
   }
 
+  // Função que ocorre quando a mutações ocorrer
   handleMutation(mutation) {
     if (mutation[0].target.classList.contains(this.observerClass)) {
       this.observer.disconnect();
       this.numerosAnima();
     }
   }
+
+  // Adiciona o MutationObserver para verificar
+  // quando a classe ativo é adicionada ao elemenet target
 
   addMutationObserver() {
     this.observer = new MutationObserver(this.handleMutation);
