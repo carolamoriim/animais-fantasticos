@@ -3,7 +3,6 @@ import Accordion from "./modules/accordion.js";
 import TabNav from "./modules/tabnav.js";
 import Modal from "./modules/modal.js";
 import Tooltip from "./modules/tooltip.js";
-import initAnimaNumeros from "./modules/animacao-numeros.js";
 import initDropdownMenu from "./modules/dropdown-menu.js";
 import initMenuMobile from "./modules/menu-mobile.js";
 import initFuncionamento from "./modules/funcionamento.js";
@@ -31,7 +30,6 @@ const tooltip = new Tooltip("[data-tooltip]");
 tooltip.init();
 console.log(tooltip);
 
-initAnimaNumeros();
 initDropdownMenu();
 initMenuMobile();
 initFuncionamento();
