@@ -25,9 +25,11 @@ export default class AnimaNumeros {
   // Ativa incrementar número para cada
   // número selecionado do dom
   numerosAnima() {
-    this.numeros.forEach((numero) =>
-      this.constructor.incrementarNumero(numero)
-    );
+    if (this?.numeros) {
+      this.numeros.forEach((numero) =>
+        this.constructor.incrementarNumero(numero)
+      );
+    }
   }
 
   // Função que ocorre quando a mutações ocorrer
@@ -50,7 +52,6 @@ export default class AnimaNumeros {
     if (this.numeros.length && this.observeTarget) {
       this.addMutationObserver();
     }
-    this.addMutationObserver();
     return this;
   }
 }
